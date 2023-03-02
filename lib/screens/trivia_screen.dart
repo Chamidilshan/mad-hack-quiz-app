@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mad_hack_quiz/widgets/question_details.dart';
+import 'package:mad_hack_quiz/models/questions.dart';
 
 class TraciaScreen extends StatefulWidget {
   const TraciaScreen({Key? key}) : super(key: key);
@@ -9,6 +10,10 @@ class TraciaScreen extends StatefulWidget {
 }
 
 class _TraciaScreenState extends State<TraciaScreen> {
+
+  List<Question>? questions;
+  var isLoaded = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
