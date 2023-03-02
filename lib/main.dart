@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mad_hack_quiz/screens/home.dart';
 import 'package:flutter/material.dart';
+import 'package:mad_hack_quiz/screens/trivia_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: HomeScreen(),
+      home: TraciaScreen(),
     );
   }
 }

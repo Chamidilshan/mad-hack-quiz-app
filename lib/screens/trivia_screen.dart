@@ -10,6 +10,30 @@ class TraciaScreen extends StatefulWidget {
 class _TraciaScreenState extends State<TraciaScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'Quizes'
+        ),
+      ),
+      backgroundColor: Colors.blue,
+      body: ListView.builder(
+          itemBuilder: (context, index){
+            return  Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Container(
+                width: double.infinity,
+                height: 80.0,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.0),
+                  color: Colors.white
+                ),
+                child: Text('Quiz'),
+              ),
+            );
+          },
+        itemCount: 5,
+          )
+    );
   }
 }
