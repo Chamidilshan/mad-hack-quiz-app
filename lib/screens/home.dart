@@ -6,24 +6,30 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
+      backgroundColor: Color(0xFFFF05A8E1),
       body: Column(
         children: [
           Card(
             margin: EdgeInsets.all(20.0),
             child: SizedBox(
               width: double.infinity,
-              child: Column(
-                children: [
-                  Icon(Icons.quiz),
-                  Text('Mad Hack',
-                    style: TextStyle(
-                        fontSize: 34,
-                        color: Colors.blue,
-                        fontWeight: FontWeight.bold
+              child: Padding(
+                padding: const EdgeInsets.only(top: 10.0, bottom: 10.0),
+                child: Column(
+                  children: [
+                    Image(image: AssetImage('images/logo.png')),
+                    SizedBox(
+                      height: 10.0,
                     ),
-                  ),
-                ],
+                    Text('MadHack Trivia',
+                      style: TextStyle(
+                          fontSize: 34,
+                          color: Colors.blue,
+                          fontWeight: FontWeight.bold
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
@@ -31,24 +37,18 @@ class HomeScreen extends StatelessWidget {
             Navigator.push(context,MaterialPageRoute(builder: (context) => TraciaScreen()));
           },
               style: TextButton.styleFrom(
-                backgroundColor: Colors.deepPurpleAccent,
+                backgroundColor: Color(0xFF0B4A93),
                 padding: EdgeInsets.all(20.0)
               ),
               child: Text(
-                'Start quiz'
+                'Start Trivia',
+                style: TextStyle(
+                  color: Colors.white
+                ),
               )
           ),
           SizedBox(
             height: 20.0,
-          ),
-          TextButton(onPressed: () {},
-              style: TextButton.styleFrom(
-                  backgroundColor: Colors.deepPurpleAccent,
-                  padding: EdgeInsets.all(20.0)
-              ),
-              child: Text(
-                  'Start quiz'
-              )
           ),
         ],
       ),

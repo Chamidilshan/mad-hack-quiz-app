@@ -37,11 +37,12 @@ class _TraciaScreenState extends State<TraciaScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xFFFF05A8E1),
         title: Text(
           'Quizes'
         ),
       ),
-      backgroundColor: Colors.blue,
+        backgroundColor: Color(0xFFFF05A8E1),
       body: Visibility(
         visible: isLoaded,
         child: ListView.builder(
